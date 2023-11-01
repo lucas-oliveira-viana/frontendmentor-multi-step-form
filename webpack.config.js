@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
-  entry: './src/index.jsx',
+  entry: './src/index.js',
   devtool: 'inline-source-map',
   output: {
     path: path.join(__dirname, '/dist'),
@@ -21,12 +21,24 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.jsx?$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(ttf|png)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
     ],
   },
   resolve: {
-    extensions: ['.jsx', '.js'],
+    extensions: ['.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
