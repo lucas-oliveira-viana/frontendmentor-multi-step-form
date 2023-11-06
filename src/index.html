@@ -9,5 +9,101 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
+    <div class="container">
+      <aside>
+        <nav class="sidebar">
+          <ul class="tabs">
+            <li class="tab">
+              <a class="step" href="#tab1">
+                <span>1</span>
+                <div class="step__content">
+                  <span>STEP 1</span>
+                  <span>YOUR INFO</span>
+                </div>
+              </a>
+            </li>
+            <li class="tab">
+              <a class="step" href="#tab2">
+                <span>2</span>
+                <div class="step__content">
+                  <span>STEP 2</span>
+                  <span>SELECT PLAN</span>
+                </div>
+              </a>
+            </li>
+            <li class="tab">
+              <a class="step" href="#tab3">
+                <span>3</span>
+                <div class="step__content">
+                  <span>STEP 3</span>
+                  <span>ADD-ONS</span>
+                </div>
+              </a>
+            </li>
+            <li class="tab">
+              <a class="step" href="#tab4">
+                <span>4</span>
+                <div class="step__content">
+                  <span>STEP 4</span>
+                  <span>SUMMARY</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="content">
+        <div class="personal-info tab-content" id="tab1">
+          <div>
+            <div>
+              <h1>Personal info</h1>
+              <p class="personal-info__description">
+                Please provide your name, email address, and phone number.
+              </p>
+            </div>
+            <form>
+              <div class="field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="e.g. Stephen King"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g. stephenking@lorem.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. +1 234 567 890"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div>
+            <button class="next">Next Step</button>
+          </div>
+        </div>
+        <div class="tab-content" id="tab2">Tab 2 content</div>
+        <div class="tab-content" id="tab3">Tab 3 content</div>
+        <div class="tab-content" id="tab4">Tab 4 content</div>
+      </main>
+    </div>
   </body>
 </html>

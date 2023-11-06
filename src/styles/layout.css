@@ -1,0 +1,15 @@
+.container {
+  background-color: #fff;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.sidebar {
+  background-image: url('../assets/images/bg-sidebar-desktop.svg');
+  width: 274px;
+  height: 568px;
+}

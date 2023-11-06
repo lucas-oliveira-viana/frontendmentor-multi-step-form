@@ -1,0 +1,66 @@
+@import './font.css';
+@import './layout.css';
+@import './sidebar.css';
+@import './reset.css';
+@import './global.css';
+
+.next {
+  border: none;
+  background-color: #092950;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.next:hover {
+  opacity: 0.9;
+}
+
+/* Personal info page */
+
+.personal-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.personal-info label {
+  letter-spacing: -1px;
+}
+
+.personal-info input {
+  border: 1px solid #dbdadf;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.personal-info input::placeholder {
+  opacity: 0.8;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.personal-info__description {
+  color: #a0a0a6;
+  margin-top: 15px;
+  margin-bottom: 45px;
+  font-weight: 400;
+}

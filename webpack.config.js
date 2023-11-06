@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -7,6 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
+    assetModuleFilename: 'src/assets/[name].[ext]'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -24,16 +26,9 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.svg$/i,
-        issuer: /\.jsx?$/,
-        use: ['@svgr/webpack'],
-      },
-      {
-        test: /\.(ttf|png)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
+        test: /\.(ttf|png|svg)$/i,
+        type: 'asset/resource',
+        dependency: { not: ['url'] },
       },
     ],
   },

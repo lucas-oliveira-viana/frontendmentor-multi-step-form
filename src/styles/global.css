@@ -1,0 +1,16 @@
+body {
+  font-family: Ubuntu;
+  background-color: #eef5ff;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+input,
+button {
+  font-family: Ubuntu;
+}
+
+h1,
+label {
+  color: #092950;
+}
